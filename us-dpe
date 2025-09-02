@@ -1,3 +1,6 @@
+// dpe v1.0
+// by HeroOfDungeon
+// based on:
 // Programmer Dvorak with European Letters v. 1.0.1
 // by Dmitry Prokashev <heliosframework at gmail dot com>
 // based on Programmer Dvorak by Roland Kaufmann
@@ -8,56 +11,56 @@
 partial alphanumeric_keys
 xkb_symbols "dpe" {
 
-    name[Group1] = "English (Programmer Dvorak with European Letters)";
+    name[Group1] = "English (Programmer Dvorak with European Letters) Plus";
 
-    key <TLDE> { [ dollar,       asciitilde,          EuroSign,                 cent ] };
-    key <AE01> { [ ampersand,    percent,             sterling,                  yen ] };
-    key <AE02> { [ bracketleft,  7,              guillemotleft,                U2039 ] };
-    key <AE03> { [ braceleft,    5                                                   ] };
+    key <TLDE> { [ dollar,       asciitilde                                          ] };
+    key <AE01> { [ ampersand,    percent                                             ] };
+    key <AE02> { [ bracketleft,  1,              guillemotleft,                U2039 ] }; // « ‹ Re-ordered numbers -----
+    key <AE03> { [ braceleft,    2,                ordfeminine,          twosuperior ] };
     key <AE04> { [ braceright,   3,                  masculine,        threesuperior ] };
-    key <AE05> { [ parenleft,    1,                    onehalf,          onesuperior ] };
-    key <AE06> { [ equal,        9                                                   ] };
-    key <AE07> { [ asterisk,     0,                   multiply,             division ] };
-    key <AE08> { [ parenright,   2,                ordfeminine,          twosuperior ] };
-    key <AE09> { [ plus,         4                                                   ] };
-    key <AE10> { [ bracketright, 6,             guillemotright,                U203A ] };
-    key <AE11> { [ exclam,       8,                 exclamdown,                U2E18 ] };
-    key <AE12> { [ numbersign,   grave,        dead_circumflex,           dead_caron ] };
+    key <AE05> { [ parenleft,    4,                    onehalf,          onesuperior ] };
+    key <AE06> { [ equal,        5,                      U2248,                U2261 ] }; // ≈ ≡
+    key <AE07> { [ asterisk,     6,                   multiply,             division ] };
+    key <AE08> { [ parenright,   7                                                   ] };
+    key <AE09> { [ plus,         8                                                   ] };
+    key <AE10> { [ bracketright, 9,             guillemotright,                U203A ] }; // » ›
+    key <AE11> { [ exclam,       0                                                   ] }; // -----
+    key <AE12> { [ numbersign,   grave,             dead_grave,           dead_acute ] }; // ` ´ (Dead Keys)
 
-    key <AD01> { [ semicolon,    colon,     doublelowquotemark,   singlelowquotemark ] };
-    key <AD02> { [ comma,        less,     leftdoublequotemark,  leftsinglequotemark ] };
-    key <AD03> { [ period,       greater, rightdoublequotemark, rightsinglequotemark ] };
-    key <AD04> { [ p,            P,                         oe,                   OE ] };
-    key <AD05> { [ y,            Y,                 ydiaeresis,           Ydiaeresis ] };
-    key <AD06> { [ f,            F,                     egrave,               Egrave ] };
-    key <AD07> { [ g,            G,                     eacute,               Eacute ] };
-    key <AD08> { [ c,            C,                   ccedilla,             Ccedilla ] };
-    key <AD09> { [ r,            R,                     yacute,               Yacute ] };
-    key <AD10> { [ l,            L,                     oslash,               Oslash ] };
-    key <AD11> { [ slash,        question,        questiondown,                U203D ] };
-    key <AD12> { [ at,           asciicircum,        copyright,           numerosign ] };
+    key <AD01> { [ semicolon,    colon                                               ] };
+    key <AD02> { [ comma,        less                                                ] };
+    key <AD03> { [ period,       greater,                 U2026                      ] }; // … (Triple Dot)
+    key <AD04> { [ p,            P                                                   ] };
+    key <AD05> { [ y,            Y                                                   ] };
+    key <AD06> { [ f,            F                                                   ] };
+    key <AD07> { [ g,            G                                                   ] };
+    key <AD08> { [ c,            C,                   ccedilla,             Ccedilla ] }; // ç Ç
+    key <AD09> { [ r,            R                                                   ] };
+    key <AD10> { [ l,            L                                                   ] };
+    key <AD11> { [ slash,        question                                            ] };
+    key <AD12> { [ at,           asciicircum,        copyright                       ] };
 
-    key <AC01> { [ a,            A,                 adiaeresis,           Adiaeresis ] };
-    key <AC02> { [ o,            O,                 odiaeresis,           Odiaeresis ] };
-    key <AC03> { [ e,            E,                 ediaeresis,           Ediaeresis ] };
-    key <AC04> { [ u,            U,                 udiaeresis,           Udiaeresis ] };
-    key <AC05> { [ i,            I,                 idiaeresis,           Idiaeresis ] };
-    key <AC06> { [ d,            D,                        eth,                  Eth ] };
-    key <AC07> { [ h,            H,                     ugrave,               Ugrave ] };
-    key <AC08> { [ t,            T,                      thorn,                Thorn ] };
-    key <AC09> { [ n,            N,                     ntilde,               Ntilde ] };
-    key <AC10> { [ s,            S,                     ssharp,              section ] };
-    key <AC11> { [ minus,        underscore,            oacute,               Oacute ] };
-    key <BKSL> { [ backslash,    bar,           dead_abovering,          dead_macron ] };
+    key <AC01> { [ a,            A,                 adiaeresis,           Adiaeresis ] }; // ä Ä
+    key <AC02> { [ o,            O,                 odiaeresis,           Odiaeresis ] }; // ö Ö
+    key <AC03> { [ e,            E,                     eacute,               Eacute ] }; // é É
+    key <AC04> { [ u,            U,                 udiaeresis,           Udiaeresis ] }; // ü Ü
+    key <AC05> { [ i,            I,                 idiaeresis,           Idiaeresis ] }; // ï Ï
+    key <AC06> { [ d,            D,                       LEFT,                Begin ] }; // Added vim-motions on alt and more motions on alt + shift + dhtn (hjkl on qwerty) -----
+    key <AC07> { [ h,            H,                       DOWN,             PageDOWN ] };
+    key <AC08> { [ t,            T,                         UP,               PageUp ] };
+    key <AC09> { [ n,            N,                      RIGHT,                  End ] }; // -----
+    key <AC10> { [ s,            S,                    section,               ssharp ] }; // § ß
+    key <AC11> { [ minus,        underscore,            emdash                       ] }; // —
+    key <BKSL> { [ backslash,    bar,                brokenbar                       ] }; // ¦
 
-    key <AB01> { [ apostrophe,   quotedbl,          dead_acute,            0x1002026 ] };
-    key <AB02> { [ q,            Q,                         ae,                   AE ] };
-    key <AB03> { [ j,            J,                     uacute,               Uacute ] };
-    key <AB04> { [ k,            K,                      U0133,                U0132 ] };
-    key <AB05> { [ x,            X,                     aacute,               Aacute ] };
-    key <AB06> { [ b,            B,                     iacute,               Iacute ] };
-    key <AB07> { [ m,            M,                     ograve,               Ograve ] };
-    key <AB08> { [ w,            W,                      aring,                Aring ] };
-    key <AB09> { [ v,            V,                     igrave,               Igrave ] };
-    key <AB10> { [ z,            Z,                     agrave,               Agrave ] };
+    key <AB01> { [ apostrophe,   quotedbl                                            ] };
+    key <AB02> { [ q,            Q,                     agrave,               Agrave ] }; // à À
+    key <AB03> { [ j,            J,                     egrave,               Egrave ] }; // è È
+    key <AB04> { [ k,            K                                                   ] };
+    key <AB05> { [ x,            X                                                   ] };
+    key <AB06> { [ b,            B                                                   ] };
+    key <AB07> { [ m,            M                                                   ] };
+    key <AB08> { [ w,            W                                                   ] };
+    key <AB09> { [ v,            V                                                   ] };
+    key <AB10> { [ z,            Z                                                   ] };
 };
