@@ -1,11 +1,28 @@
-**Dvorak for Programmers with European Keys**
-==============================================
+# Dvorak for Programmers with European Keys
+Forked from https://www.github.com/asvd/programmer-dvorak-eu/, make sure to check it out!
 
-This is the usual **Dvorak for Programmers** keyboard layout (initially made by Ronald Kaufmann) upgraded to include West-European characters as alternative symbols. The way they match the main letters was inspired by [EurKEY](https://eurkey.steffen.bruentjen.eu) layout (by Steffen Bruentjen). Other special characters distributed among the keys in a *reasonable* way (in my own way of understanding of what *reasonable* is, although feedback is always appreciated). Essential dead keys are present for common diactricts (marked red on the image below), but they are located on the most distant keys to reduce the chance of influence on hotkeys.
+## About
+It all started when I didn't like the order of the numbers that much, so I decided to modify it to look similar to QWERTY. After that, I started changing the third and fourth layers, and now I'm here.
 
-![Dvorak for Programmers with European Keys](preview.png)
+## Layout
+```
+Default
+     $ & \[ { } ( = * ) + ] ! # Delete
+  Tab ; , . p y f g c r l / @ Enter
+  Caps a o e u i d h t n s - \ Enter
+Shift \ ' q j k x b m w v z Shift
 
-### Manual installation on (Ubuntu) Linux
+Shift
+     ~ % 1 2 3 4 5 6 7 8 9 0 ` Delete
+  Tab : < > P Y F G C R L ? ^ Enter
+  Caps A O E U I D H T N S _ | Ener
+Shift | " Q J K X B M W V Z Shift
+
+AltGr
+...
+```
+
+## Manual installation on (Ubuntu) Linux
 
 All the actions below are to be performed under **#root**
 
@@ -13,7 +30,7 @@ All the actions below are to be performed under **#root**
 $ sudo su
 ```
 
-- insert the contents of the [us-dpe](https://raw.githubusercontent.com/asvd/programmer-dvorak-eu/master/us-dpe) layout at the very end of `/usr/share/X11/xkb/symbols/us`
+- insert the contents of the [us-dpe](https://raw.githubusercontent.com/HeroOfDungeon/programmer-dvorak-eu/refs/heads/master/us-dpe) layout at the very end of `/usr/share/X11/xkb/symbols/us`
 
 - open `/usr/share/X11/xkb/rules/evdev.xml` and find the `us` layout configuration starting with something like
 
@@ -53,10 +70,3 @@ or
  ```
 
 Now the new layout should be selectable in the system settings window as a variant of English layout
-
-
----
-
-visit my homepage: https://asvd.github.io
-
-follow me on twitter: https://twitter.com/asvd0
