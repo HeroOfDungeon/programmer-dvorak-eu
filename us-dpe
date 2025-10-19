@@ -39,7 +39,7 @@ xkb_symbols "dpe" {
     key <AE06> { [ plus,         6,                  plusminus,                U2076 ] }; // + 6 ± ⁶
     key <AE07> { [ exclam,       7,                      U221E,                U2077 ] }; // ! 7 ∞ ⁷
     key <AE08> { [ asterisk,     8,                      U221A,                U2078 ] }; // * 8 √ ⁸
-    key <AE09> { [ parenleft,    9                       U221B,                U2079 ] }; // ( 9 ∛ ⁹
+    key <AE09> { [ parenleft,    9,                      U221B,                U2079 ] }; // ( 9 ∛ ⁹
     key <AE10> { [ parenright,   0,                     degree,                U2070 ] }; // ) 0 ° ⁰
     key <AE11> { [ ampersand,    percent,                U2211                       ] }; // & % ∑
     key <AE12> { [ numbersign,   grave,             dead_grave,           dead_acute ] }; // # ` ̀  ́
@@ -80,4 +80,5 @@ xkb_symbols "dpe" {
     key <AB08> { [ w,            W                                                   ] }; // w W
     key <AB09> { [ v,            V                                                   ] }; // v V
     key <AB10> { [ z,            Z                                                   ] }; // z Z
+
 };
