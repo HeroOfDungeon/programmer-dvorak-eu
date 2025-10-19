@@ -70,3 +70,9 @@ or
  ```
 
 Now the new layout should be selectable in the system settings window as a variant of English layout
+
+##
+Test if it works
+```
+# xkbcomp -w 10 -xkb /usr/share/X11/xkb/symbols/us /tmp/test.xkb
+```
