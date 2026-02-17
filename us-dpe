@@ -1,19 +1,16 @@
-// dpe v1.3
-// by me
+// dpe v1.4
+// by HeroOfDungeon
 // based on:
 // Programmer Dvorak with European Letters v. 1.0.1
 // by Dmitry Prokashev <heliosframework at gmail dot com>
 // based on Programmer Dvorak by Roland Kaufmann
 //
-// Most of the European characters match the corresponding letters
-// mainly in the same way they do in EurKEY by Steffen Bruentjen
-//
 // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
 // │ ~   │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ⁴ │ 5 ⁵ │ 6 ⁶ │ 7 ⁷ │ 8 ⁸ │ 9 ⁹ │ 0 ⁰ │ %   │ `  ́ ┃Backspace┃
-// │ $   │ [ ½ │ { ⅓ │ } ⅔ │ ] ¾ │ = ≈ │ + ± │ ! ∞ │ * √ │ ( ∛ │ ) ° │ & ∑ │ #  ̀ ┃ ⌫       ┃
+// │ $  ̃ │ [ ½ │ { ⅓ │ } ⅔ │ ] ¾ │ = ≈ │ + ± │ ! ∞ │ * √ │ ( ∛ │ ) ° │ & ∑ │ #  ̀ ┃ ⌫       ┃
 // ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
-// ┃ Tab   ┃ :   │ < ≤ │ > ≥ │ P Ω │ Y δ │ F ε │ G ζ │ C © │ R   │ L   │ ?   │ ^   ┃ ⏎     ┃
-// ┃ ↹     ┃ ;   │ , « │ . » │ p π │ y α │ f β │ g γ │ c ç │ r ø │ l   │ /   │ @   ┃ Enter ┃
+// ┃ Tab   ┃ :  ̈ │ < ≤ │ > ≥ │ P Ω │ Y δ │ F ε │ G ζ │ C © │ R   │ L   │ ?   │ ^   ┃ ⏎     ┃
+// ┃ ↹     ┃ ;   │ , « │ . » │ p π │ y α │ f β │ g γ │ c ç │ r ø │ l   │ /   │ @  ̂ ┃ Enter ┃
 // ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
 // ┃ Caps   ┃ A Ä │ O Ö │ E É │ U Ü │ I Ï │ D   │ H   │ T   │ N   │ S ß │ _   │ |   ┃      ┃
 // ┃ Lock ⇬ ┃ a ä │ o ö │ e é │ u ü │ i ï │ d ← │ h ↓ │ t ↑ │ n → │ s § │ - — │ \ ¦ ┃      ┃
@@ -30,7 +27,7 @@ xkb_symbols "dpe" {
 
     name[Group1] = "English (Programmer Dvorak with European Letters)";
 
-    key <TLDE> { [ dollar,       tilde                                               ] }; // $ ~
+    key <TLDE> { [ dollar,       asciitilde,        dead_tilde                       ] }; // $ ~  ̃
     key <AE01> { [ bracketleft,  1,                    onehalf,          onesuperior ] }; // [ 1 ½ ¹
     key <AE02> { [ braceleft,    2,                      u2153,          twosuperior ] }; // { 2 ⅓ ²
     key <AE03> { [ braceright,   3,                      U2154,        threesuperior ] }; // } 3 ⅔ ³
@@ -42,9 +39,9 @@ xkb_symbols "dpe" {
     key <AE09> { [ parenleft,    9,                      U221B,                U2079 ] }; // ( 9 ∛ ⁹
     key <AE10> { [ parenright,   0,                     degree,                U2070 ] }; // ) 0 ° ⁰
     key <AE11> { [ ampersand,    percent,                U2211                       ] }; // & % ∑
-    key <AE12> { [ numbersign,   grave,             dead_grave,           dead_acute ] }; // # ` ̀  ́
+    key <AE12> { [ numbersign,   grave,             dead_grave,           dead_acute ] }; // # `  ̀  ́
 
-    key <AD01> { [ semicolon,    colon                                               ] }; // ; :
+    key <AD01> { [ semicolon,    colon,         dead_diaeresis                       ] }; // ; :  ̈
     key <AD02> { [ comma,        less,           guillemotleft,                U2264 ] }; // , < « ≤
     key <AD03> { [ period,       greater,       guillemotright,                U2265 ] }; // . > » ≥
     key <AD04> { [ p,            P,                      U03C0,                U03A9 ] }; // p P π Ω
@@ -55,7 +52,7 @@ xkb_symbols "dpe" {
     key <AD09> { [ r,            R,                     oslash                       ] }; // r R ø
     key <AD10> { [ l,            L                                                   ] }; // l L
     key <AD11> { [ slash,        question                                            ] }; // / ?
-    key <AD12> { [ at,           asciicircum                                         ] }; // @ ^
+    key <AD12> { [ at,           asciicircum,  dead_circumflex                       ] }; // @ ^  ̂
 
     key <AC01> { [ a,            A,                 adiaeresis,           Adiaeresis ] }; // a A ä Ä
     key <AC02> { [ o,            O,                 odiaeresis,           Odiaeresis ] }; // o O ö Ö
@@ -80,5 +77,5 @@ xkb_symbols "dpe" {
     key <AB08> { [ w,            W                                                   ] }; // w W
     key <AB09> { [ v,            V                                                   ] }; // v V
     key <AB10> { [ z,            Z                                                   ] }; // z Z
-
 };
+
